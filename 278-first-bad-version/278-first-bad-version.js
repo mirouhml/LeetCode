@@ -18,6 +18,8 @@ var solution = function(isBadVersion) {
      * @return {integer} The first bad version
      */
     return function(n) {
+        if (n === 1 && isBadVersion(n))
+            return n;
         let left = 1;
         let right = n;
         let mid;
